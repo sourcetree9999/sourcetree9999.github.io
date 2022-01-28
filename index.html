@@ -116,6 +116,63 @@
 	   
 	<div class="article-header">
 	    
+		<a class="article-title" href="/2022/01/28/dfs%E8%A7%84%E5%BE%8B/">dfs规律</a>  
+	       
+		 
+
+		<div class="article-meta">
+			Jan 28, 2022
+			
+				<span class="iconfont icon-star"></span>
+				            
+						<a class="article-tag" href="/tags/dfs/">dfs</a>           
+				
+			
+		</div>
+	</div>
+
+
+	
+
+    
+	<div class="article-excerpt">	
+		 
+			<ul>
+<li><p>所有的1都有res保存结果的 2 tmp 表示要成为这个变量的临时 </p>
+</li>
+<li><p>dfs前加，dfs后面删除</p>
+</li>
+<li><p>dfs上面基本上都是满足条件，塞进res</p>
+<ul>
+<li><p>有一些问题是关于全排的，不同顺序的, 1用了 for循环以及exits去重 2用了sta.pop()弹出, 【因为是不同顺序都不一样，所以呢</p>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) {</span><br><span class="line">         <span class="comment">//for循环判断有没有已经加过了，加过了不处理</span></span><br><span class="line">         <span class="keyword">if</span> (exits[i]) <span class="keyword">continue</span>;</span><br><span class="line">         exits[i] = <span class="keyword">true</span>;<span class="comment">//已存在设置为true</span></span><br><span class="line">         sta.push(nums[i]);</span><br><span class="line">         dfs(nums, exits, res, sta);<span class="comment">//都来一遍。不按顺序</span></span><br><span class="line">         sta.pop();</span><br><span class="line">         exits[i] = <span class="keyword">false</span>;</span><br><span class="line">       </span><br><span class="line">    </span><br><span class="line">     }</span><br></pre></td></tr></tbody></table></figure></li>
+<li><p>括号问题，是按照顺序来，一路向前，接着来的【  dfs(sb.append(“(“),left-1,right,res);</p>
+</li>
+<li><p>电话号码问题，也是一路向前吧，【 dfs(digMap,exits,tmp+zm,res, len,index+1);</p>
+</li>
+<li><p>字母大小写全排序，也是一路向前  【 dfs(s1, res, index + 1);</p>
+</li>
+</ul>
+</li>
+</ul>
+
+		  	  
+	</div>
+
+	<div class="article-bottom">
+		<a class="article-readmore" href="/2022/01/28/dfs%E8%A7%84%E5%BE%8B/">Continue</a> 	
+	</div>	
+    
+</article>     
+     	
+    	  	
+  		
+    			
+
+<article class="article">		
+	   
+	<div class="article-header">
+	    
 		<a class="article-title" href="/2022/01/25/dfs/">dfs</a>  
 	       
 		 
